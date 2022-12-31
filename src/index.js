@@ -1,1 +1,1 @@
-console.log("hellpw dt");
+import "./style.css";
