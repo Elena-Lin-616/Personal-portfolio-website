@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- Header -->
-    <nav class="relative container mx-auto mt-10 px-6">
+    <nav class="relative container mx-auto mt-10 px-6 mb-16 md: mb-32">
       <!-- Flex container for nav Items -->
       <div class="flex justify-between space-x-20 my-6">
         <!-- Personal Name -->
@@ -111,6 +111,55 @@
     </nav>
 
     <!-- Hero section -->
+    <section id="hero">
+      <!-- Container for Image & Content -->
+      <div
+        class="container mx-auto px-6 flex flex-col items-center space-y-10 md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20"
+      >
+        <!-- Image -->
+        <div class="flex justify-center items-center md:w-1/2">
+          <div
+            class="w-64 h-64 lg:w-96 lg:h-96 rounded-full border overflow-hidden"
+          >
+            <img src="./images/personal-picture.JPG" />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex flex-col space-y-6 md:w-1/2">
+          <h1
+            class="font-league text-3xl font-bold text-center md:text-left md:text-4xl lg:text-6xl"
+          >
+            I'm a Fullstack Developer
+          </h1>
+          <p
+            class="max-w-sm mx-auto text-center text-lg text-grayishBlue md:text-left md:mx-0"
+          >
+            Hi, I'm Na Lin, a full-stack developer by using React, Node, Express
+            and Postgres.
+          </p>
+          <p
+            class="max-w-sm mx-auto text-center text-lg text-grayishBlue md:text-left md:mx-0"
+          >
+            I'm very passionate about solving real-world problem and
+            consistently growing with new skills
+          </p>
+          <!-- Buttons container -->
+          <div
+            class="flex items-center justify-center space-x-10 md:justify-start"
+          >
+            <a
+              class="px-6 py-3 bg-softBlue text-white border rounded-lg shadow-md cursor-pointer hover:bg-white hover:text-black hover:border-softBlue duration-200"
+              >See my projects</a
+            >
+            <a
+              class="px-6 py-3 border rounded-lg shadow-md cursor-pointerhover:text-black hover:border-softBlue duration-200"
+              >About Me</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Rroject section -->
 
