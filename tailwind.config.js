@@ -2,6 +2,12 @@
 module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "1020px",
+      xl: "1440px",
+    },
     extend: {
       colors: {
         softBlue: "hsl(231, 69%, 60%)",
