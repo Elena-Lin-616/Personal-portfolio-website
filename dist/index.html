@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- TODO: scroll smooth -->
 <!-- TODO: nav around page  -->
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,21 +45,23 @@
         >
           <!--  menu item 1 -->
           <div class="group relative">
-            <a href="#" class="group-hover:cursor-pointer">Projects</a>
+            <a href="#projects" class="group-hover:cursor-pointer">Projects</a>
             <div
               class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue group-hover:border-2 duration-200"
             ></div>
           </div>
           <!--  menu item 2 -->
           <div class="group relative">
-            <a href="#" class="group-hover:cursor-pointer">About Me</a>
+            <a href="#about" class="group-hover:cursor-pointer">About Me</a>
             <div
               class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue group-hover:border-2 duration-200"
             ></div>
           </div>
           <!--  menu item 3 -->
           <div class="group relative">
-            <a href="#" class="group-hover:cursor-pointer">Testimonial</a>
+            <a href="#testimonial" class="group-hover:cursor-pointer"
+              >Testimonial</a
+            >
             <div
               class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue group-hover:border-2 duration-200"
             ></div>
@@ -68,7 +70,7 @@
           <!--  menu item 4 -->
           <div class="group">
             <a
-              href="#"
+              href="#contact"
               class="px-6 p-3 border rounded-lg bg-softRed text-white shadow-lg hover:text-grayishBlue hover:bg-white hover:border-softRed group-hover:cursor-pointer duration-200"
               >Contact Me</a
             >
@@ -97,21 +99,21 @@
         >
           <!-- Item 1 -->
           <div class="group relative">
-            <a href="#" class="w-full text-center">Projects</a>
-            <div
-              class="absolute group-hover:-bottom-2 group-hover:border-b group-hover:border-white w-full"
-            ></div>
-          </div>
-          <!-- Item 3 -->
-          <div class="group relative">
-            <a href="#" class="w-full text-center">About Me</a>
+            <a href="#projects" class="w-full text-center">Projects</a>
             <div
               class="absolute group-hover:-bottom-2 group-hover:border-b group-hover:border-white w-full"
             ></div>
           </div>
           <!-- Item 2 -->
           <div class="group relative">
-            <a href="#" class="w-full text-center">Testimonial</a>
+            <a href="#about" class="w-full text-center">About Me</a>
+            <div
+              class="absolute group-hover:-bottom-2 group-hover:border-b group-hover:border-white w-full"
+            ></div>
+          </div>
+          <!-- Item 3 -->
+          <div class="group relative">
+            <a href="#testimonial" class="w-full text-center">Testimonial</a>
             <div
               class="absolute group-hover:-bottom-2 group-hover:border-b group-hover:border-white w-full"
             ></div>
@@ -119,7 +121,7 @@
 
           <!-- Item 4 -->
           <a
-            href="#"
+            href="#contact"
             class="w-full text-center border-softRed border-2 py-3 bg-softRed rounded-3xl hover:bg-white hover:text-grayishBlue hover:border-softRed"
             >Contact Me</a
           >
@@ -455,7 +457,7 @@
 
     <!-- Testimonial section -->
     <!-- Testimonial Heading -->
-    <section id="Testimonial" class="py-10">
+    <section id="testimonial" class="py-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col items-center md:items-start">
           <div>
@@ -586,16 +588,14 @@
           <div class="font-league text-3xl font-bold text-white">
             Na Lin<span class="text-softRed text-4xl ml-0.5">.</span>
           </div>
-          <a href="#features" class="text-gray-400 hover:text-softRed"
+          <a href="#projects" class="text-gray-400 hover:text-softRed"
             >Projects</a
           >
-          <a href="#features" class="text-gray-400 hover:text-softRed"
-            >About me</a
-          >
-          <a href="#features" class="text-gray-400 hover:text-softRed"
+          <a href="#about" class="text-gray-400 hover:text-softRed">About me</a>
+          <a href="#testimonial" class="text-gray-400 hover:text-softRed"
             >Testimonial</a
           >
-          <a href="#features" class="text-gray-400 hover:text-softRed"
+          <a href="#contact" class="text-gray-400 hover:text-softRed"
             >Contact Me</a
           >
         </div>
