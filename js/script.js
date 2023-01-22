@@ -1,5 +1,3 @@
-import "./style.css";
-
 // Hamburger menu
 const btn__hamburger = document.getElementById("menu-btn");
 const mobile_menu = document.getElementById("menu");
