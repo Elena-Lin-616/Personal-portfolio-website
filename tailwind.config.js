@@ -8,6 +8,11 @@ module.exports = {
       xl: "1440px",
     },
     extend: {
+      spacing: {
+        width: {
+          776: "32rem",
+        },
+      },
       colors: {
         softBlue: "hsl(231, 69%, 60%)",
         softRed: "hsl(0, 94%, 66%)",
