@@ -1,31 +1,14 @@
-# Simple Tailwind CSS Starter
+# Na Lin's personal portfolio webiste
 
-This is an extremley simple setup to develop Tailwind projects. This will be used in my Tailwind From Scratch course.
+<img src="./images/portfolio-website.png" alt="portfolio website"/>
 
-## Usage
+### Description
 
-Install dependencies
+Hello and welcome to the codebase of my personal portfolio website. Here is the place for you to get more detail about my skills, projects, experience, and achievements.
 
-```
-npm install
-```
+### Technologies
 
-Run Tailwind CLI in watch mode
-
-```
-npm run dev
-```
-
-You can use tailwind classes in any .html files in the root directory
-
-Put any custom CSS that you may have in the **src/input.css** file
-
-Add any config values to the **tailwind.config.js** file
-
-To build once, run
-
-```
-npm run build
-```
-
-You only need to deploy your html files and css/style.css
+- HTML
+- CSS
+- TailwindCSS
+- JavaScript/TypeScript
