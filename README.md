@@ -1,6 +1,6 @@
 # Na Lin's personal portfolio webiste
 
-<img src="./images/portfolio-website.gif" alt="portfolio website"/>
+<img style="width:100%;" src="./images/portfolio-website.gif" alt="portfolio website"/>
 
 ### Description
 
