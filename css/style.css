@@ -1723,6 +1723,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     top: -2rem;
   }
 
+  .lg\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .lg\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -1856,6 +1861,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .lg\:pt-0 {
