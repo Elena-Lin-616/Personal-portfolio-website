@@ -568,6 +568,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.5rem;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -1516,6 +1526,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 42rem;
   }
 
+  .md\:max-w-lg {
+    max-width: 32rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1635,6 +1649,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:max-w-lg {
     max-width: 32rem;
+  }
+
+  .lg\:max-w-md {
+    max-width: 28rem;
   }
 
   .lg\:flex-row {
