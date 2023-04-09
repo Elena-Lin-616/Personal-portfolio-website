@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<!-- TODO:  -->
-<!-- 3. Linkedin href link of <a> in contact and footer icon  -->
-<!-- 4. Project image, desc, link to code & demo -->
-<!-- 5. Ask testimonial from Kara and Maxiel -->
-<!-- 6. About me section, more content  -->
-<!-- ?: change About section layout : left image, right 3 dot info -->
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,44 +28,59 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Dark/Light Mode determined by previous setting / operating system setting -->
+    <script>
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Na Lin | Fullstack Software Engineer</title>
   </head>
-  <body class="font-sans">
+  <body class="font-sans dark:bg-veryDarkBlue dark:text-white">
     <!-- Header -->
     <nav class="relative container mx-auto mt-10 px-6 mb-32">
       <!-- Flex container for nav Items -->
-      <div class="flex justify-between space-x-20 my-6">
+      <div class="flex justify-between space-x-20 my-6 lg:mx-10">
         <!-- Personal Name -->
         <div class="font-league text-3xl font-bold">
           Na Lin<span class="text-softRed text-4xl ml-0.5">.</span>
         </div>
         <!-- Menu Items -->
         <div
-          class="hidden lg:flex space-x-10 text-grayishBlue text-xl font-sans"
+          class="hidden lg:flex space-x-10 text-grayishBlue text-xl font-sans dark:text-gray-100"
         >
           <!--  menu item 1 -->
           <div class="group relative">
-            <a href="#projects" class="group-hover:cursor-pointer">Projects</a>
+            <a href="#about" class="group-hover:cursor-pointer font-bold"
+              >About Me</a
+            >
             <div
-              class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue group-hover:border-2 duration-200"
+              class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue dark:group-hover:border-white group-hover:border-2 duration-200"
             ></div>
           </div>
           <!--  menu item 2 -->
-          <div class="group relative">
-            <a href="#about" class="group-hover:cursor-pointer">About Me</a>
+
+          <div class="group relative font-bold">
+            <a href="#projects" class="group-hover:cursor-pointer">Projects</a>
             <div
-              class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue group-hover:border-2 duration-200"
+              class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue dark:group-hover:border-white group-hover:border-2 duration-200"
             ></div>
           </div>
           <!--  menu item 3 -->
           <div class="group relative">
-            <a href="#testimonial" class="group-hover:cursor-pointer"
+            <a href="#testimonial" class="group-hover:cursor-pointer font-bold"
               >Testimonial</a
             >
             <div
-              class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue group-hover:border-2 duration-200"
+              class="absolute w-full -bottom-1 group-hover:border-b group-hover:border-softBlue dark:group-hover:border-white group-hover:border-2 duration-200"
             ></div>
           </div>
 
@@ -79,69 +88,136 @@
           <div class="group">
             <a
               href="#contact"
-              class="px-6 p-3 border rounded-lg bg-softRed text-white shadow-lg hover:text-grayishBlue hover:bg-white hover:border-softRed group-hover:cursor-pointer duration-200"
-              >Contact Me</a
+              class="px-3 p-1 border border-softRed rounded-lg bg-softRed text-white font-bold shadow-lg hover:text-softRed hover:bg-white hover:border-softRed group-hover:cursor-pointer duration-200 outline-none"
+              >Contact</a
             >
           </div>
+
+          <!-- Menu item 5: Dark / Light mode button -->
+          <div class="relative">
+            <button
+              class="theme-toggle absolute -top-1 text-veryDarkBlue dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg p-1"
+            >
+              <!-- Dark SVG Icon -->
+              <svg
+                class="w-7 h-7 hidden theme-toggle-dark-icon"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+
+              <!-- Light SVG Icon -->
+              <svg
+                class="w-7 h-7 hidden theme-toggle-light-icon"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <!-- Hamburger button -->
-        <div class="lg:hidden flex space-x-10 items-center">
+        <!--Mobile menu: LinkedIn, dark/light mode and  Hamburger button -->
+        <div class="lg:hidden flex space-x-6 items-center">
+          <!-- Item 1: LinkedIn -->
           <div class="self-start">
             <a
               href="https://www.linkedin.com/in/na~lin/"
               target="_blank"
               class="cursor-pointer"
               ><i
-                class="fa-brands fa-linkedin text-3xl text-softRed hover:scale-125 duration-200"
+                class="fa-brands fa-linkedin text-3xl text-softRed dark:text-white hover:scale-125 duration-200"
               ></i
             ></a>
           </div>
+          <!-- Item 2: dark/light mode -->
+          <div class="relative mb-1">
+            <button
+              class="theme-toggle text-veryDarkBlue dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg p-1"
+            >
+              <!-- Dark SVG Icon -->
+              <svg
+                class="w-6 h-6 hidden theme-toggle-dark-icon"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+
+              <!-- Light SVG Icon -->
+              <svg
+                class="w-7 h-7 hidden theme-toggle-light-icon"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Item 3: Hamburger button -->
           <button
             id="menu-btn"
             type="button"
             class="z-40 block hamburger lg:hidden focus:outline-none"
           >
-            <span class="hamburger-top"></span>
-            <span class="hamburger-middle"></span>
-            <span class="hamburger-bottom"></span>
+            <span class="hamburger-top dark:bg-white"></span>
+            <span class="hamburger-middle dark:bg-white"></span>
+            <span class="hamburger-bottom dark:bg-white"></span>
           </button>
         </div>
       </div>
       <!-- Mobile Menu  -->
       <div
         id="menu"
-        class="absolute hidden lg:hidden p-6 rounded-lg bg-gray-700 left-6 right-6 top-15 z-100"
+        class="z-40 absolute hidden lg:hidden p-6 rounded-lg bg-gray-700 dark:bg-gray-100 left-6 right-6 top-15 z-100"
       >
         <div
-          class="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm"
+          class="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white dark:text-veryDarkBlue rounded-sm"
         >
           <!-- Item 1 -->
           <div class="group relative">
             <a href="#projects" class="w-full text-center">Projects</a>
             <div
-              class="absolute group-hover:-bottom-2 group-hover:border-b group-hover:border-white w-full"
+              class="absolute group-hover:-bottom-2 group-hover:border-b-2 group-hover:border-white dark:group-hover:border-veryDarkBlue w-full"
             ></div>
           </div>
           <!-- Item 2 -->
           <div class="group relative">
             <a href="#about" class="w-full text-center">About Me</a>
             <div
-              class="absolute group-hover:-bottom-2 group-hover:border-b group-hover:border-white w-full"
+              class="absolute group-hover:-bottom-2 group-hover:border-b-2 group-hover:border-white dark:group-hover:border-veryDarkBlue w-full"
             ></div>
           </div>
           <!-- Item 3 -->
           <div class="group relative">
             <a href="#testimonial" class="w-full text-center">Testimonial</a>
             <div
-              class="absolute group-hover:-bottom-2 group-hover:border-b group-hover:border-white w-full"
+              class="absolute group-hover:-bottom-2 group-hover:border-b-2 group-hover:border-white dark:group-hover:border-veryDarkBlue w-full"
             ></div>
           </div>
 
           <!-- Item 4 -->
           <a
             href="#contact"
-            class="w-full text-center border-softRed border-2 py-3 bg-softRed rounded-3xl hover:bg-white hover:text-veryDarkBlue hover:border-softRed"
-            >Contact Me</a
+            class="px-10 text-white hover:text-veryDarkBlue text-center border-softRed border-2 py-3 bg-softRed rounded-3xl hover:bg-white hover:border-softRed"
+            >Contact</a
           >
         </div>
       </div>
@@ -165,13 +241,13 @@
         <!-- Content -->
         <div class="flex flex-col space-y-6 md:w-1/2">
           <h1
-            class="font-league text-3xl font-bold text-center md:text-left md:text-4xl lg:text-6xl"
+            class="font-league text-2xl font-bold text-center md:text-left md:text-3xl lg:text-4xl xl:text-6xl"
           >
             I'm a Software Engineer
           </h1>
 
           <p
-            class="max-w-md mx-auto text-center text-lg leading-9 text-grayishBlue md:text-left md:mx-0"
+            class="max-w-md mx-auto text-center text-lg leading-9 text-grayishBlue dark:text-white md:text-left md:mx-0"
           >
             I'm very
             <span
@@ -186,12 +262,12 @@
           >
             <a
               href="#about"
-              class="px-6 py-3 border rounded-lg shadow-md cursor-pointer hover:border-softBlue duration-200"
+              class="px-6 py-3 md:px-3 lg:px-4 md:text-sm lg:text-lg dark:text-white font-bold dark:hover:text-veryDarkBlue border rounded-lg shadow-md cursor-pointer hover:border-softBlue duration-200 dark:hover:bg-white"
               >More About Me</a
             >
             <a
               href="#projects"
-              class="px-6 py-3 bg-softBlue text-white border rounded-lg shadow-md cursor-pointer hover:bg-white hover:text-black hover:border-softBlue duration-200"
+              class="px-6 py-3 md:px-3 lg:px-4 md:text-sm lg:text-lg bg-softBlue text-white border rounded-lg shadow-md cursor-pointer hover:bg-white hover:text-black hover:border-softBlue duration-200"
               >See my projects</a
             >
           </div>
@@ -201,7 +277,7 @@
 
     <!-- About section -->
     <!-- About Heading -->
-    <section id="about" class="py-10">
+    <section id="about" class="py-10 lg:mx-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col items-center md:items-start">
           <div>
@@ -210,11 +286,13 @@
               class="mx-auto md:w-2/3 md:mx-0 border-b border-gray-400 my-3"
             ></div>
           </div>
-          <p class="text-gray-400 text-lg uppercase">I'm ...</p>
+          <p class="text-gray-400 dark:text-gray-100 text-lg uppercase">
+            I'm ...
+          </p>
         </div>
       </div>
     </section>
-    <section id="about--content" class="pb-32">
+    <section id="about--content" class="pb-32 lg:mx-10">
       <!-- About container -->
       <div class="container mx-auto px-6">
         <div
@@ -248,15 +326,19 @@
           <div
             class="border-t pt-6 w-full md:max-w-2xl lg:max-w-lg lg:border-0 lg:pt-0"
           >
-            <h3 class="text-3xl mb-4 text-softBlue font-bold">Skills</h3>
+            <h3 class="text-3xl mb-4 text-softBlue dark:text-white font-bold">
+              Skills
+            </h3>
             <!-- Content in sm, md -->
             <div
-              class="flex justify-between divide-x divide-gray-400 lg:hidden"
+              class="flex justify-between divide-x divide-gray-400 text-lg lg:hidden"
             >
               <!-- Front-end -->
-              <div class="">
-                <h5 class="text-lg">Front-end</h5>
-                <ul class="list-disc list-inside text-gray-700">
+              <div>
+                <h5 class="dark:text-white">Front-end</h5>
+                <ul
+                  class="list-disc list-inside text-gray-700 dark:text-gray-200"
+                >
                   <li>React</li>
                   <li>Redux</li>
                   <li>HTML</li>
@@ -269,8 +351,10 @@
 
               <!-- Backend -->
               <div class="pl-6 md:pl-16">
-                <h5 class="text-lg">Back-end</h5>
-                <ul class="list-disc list-inside text-gray-700">
+                <h5 class="dark:text-white">Back-end</h5>
+                <ul
+                  class="list-disc list-inside text-gray-700 dark:text-gray-200"
+                >
                   <li>JavaScript</li>
                   <li>NodeJS</li>
                   <li>ExpressJS</li>
@@ -281,8 +365,10 @@
               </div>
               <!-- Tools -->
               <div class="pl-6 md:pl-16">
-                <h5 class="text-lg">Tools</h5>
-                <ul class="list-disc list-inside text-gray-700">
+                <h5 class="dark:text-white">Tools</h5>
+                <ul
+                  class="list-disc list-inside text-gray-700 dark:text-gray-200"
+                >
                   <li>Git</li>
                   <li>GitHub</li>
                   <li>Postman</li>
@@ -293,11 +379,11 @@
               </div>
             </div>
             <!-- Content with lg screen size -->
-            <div class="hidden lg:block text-gray-700">
+            <div class="hidden lg:block text-gray-700 dark:text-gray-200">
               <!-- Front-end -->
               <div class="border-b-2 pb-4">
                 <h5 class="text-lg mb-2">Front-end</h5>
-                <ul class="list-disc list-inside grid grid-cols-3">
+                <ul class="list-disc list-inside grid grid-cols-2">
                   <li>React</li>
                   <li>Redux</li>
                   <li>HTML</li>
@@ -310,7 +396,7 @@
               <!-- Back-end -->
               <div class="border-b-2 pb-4 mt-6">
                 <h5 class="text-lg mb-2">Back-end</h5>
-                <ul class="list-disc list-inside grid grid-cols-3">
+                <ul class="list-disc list-inside grid grid-cols-2">
                   <li>JavaScript</li>
                   <li>NodeJS</li>
                   <li>ExpressJS</li>
@@ -322,7 +408,7 @@
               <!-- Tools -->
               <div class="mt-6">
                 <h5 class="text-lg mb-2">Tools</h5>
-                <ul class="list-disc list-inside grid grid-cols-3">
+                <ul class="list-disc list-inside grid grid-cols-2">
                   <li>Git</li>
                   <li>GitHub</li>
                   <li>Postman</li>
@@ -338,7 +424,7 @@
     </section>
 
     <!-- Project section heading -->
-    <section id="projects" class="bg-gray-50 py-10">
+    <section id="projects" class="py-10 lg:mx-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col items-center md:items-start">
           <div>
@@ -347,13 +433,15 @@
               class="mx-auto md:w-2/3 md:mx-0 border-b border-gray-400 my-3"
             ></div>
           </div>
-          <p class="text-gray-400 text-lg uppercase">Featured Work</p>
+          <p class="text-gray-400 dark:text-gray-100 text-lg uppercase">
+            Featured Work
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Project section -->
-    <section id="projects--content" class="pb-32 bg-gray-50">
+    <section id="projects--content" class="pb-32 lg:mx-10">
       <div class="md:container md:mx-auto px-6">
         <!-- Boxes Flex Container -->
         <div
@@ -441,7 +529,7 @@
 
     <!-- Testimonial section -->
     <!-- Testimonial Heading -->
-    <section id="testimonial" class="py-10">
+    <section id="testimonial" class="py-10 lg:mx-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col items-center md:items-start">
           <div>
@@ -450,11 +538,13 @@
               class="mx-auto md:w-2/3 md:mx-0 border-b border-gray-400 my-3"
             ></div>
           </div>
-          <p class="text-gray-400 text-lg uppercase">From Fullstack Academy</p>
+          <p class="text-gray-400 dark:text-gray-100 text-lg uppercase">
+            From other software engineers
+          </p>
         </div>
       </div>
     </section>
-    <section id="testimonial--content" class="mb-32">
+    <section id="testimonial--content" class="mb-32 lg:mx-10">
       <!-- Testimonial Container -->
       <div class="container mx-auto px-6">
         <!-- Box container -->
@@ -469,7 +559,7 @@
           <!-- Box 1 -->
           <!-- TODO:  lg:w-1/2 for the Box 1 if I received 2nd testimonial.  -->
           <div
-            class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 font-sans lg:w-1/2"
+            class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-gray-700 font-sans lg:w-1/2"
           >
             <p class="text-sm leading-5 md:text-lg">
               Na is a creative and passionate individual, as well as a skilled
@@ -497,7 +587,6 @@
                   <p class="text-xs font-extralight">
                     Software Programming Instructor
                   </p>
-                  <p class="text-xs font-extralight">Fullstack Aacdemy</p>
                 </div>
               </div>
             </a>
@@ -505,7 +594,7 @@
           <!--TODO: ask for 2nd testimonial to  Box 2, code in template.html-->
           <!-- Box 2 -->
           <div
-            class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 font-sans lg:w-1/2"
+            class="flex flex-col p-10 space-y-6 lg:space-y-14 rounded-lg bg-gray-100 dark:bg-gray-700 font-sans lg:w-1/2"
           >
             <p class="text-sm leading-5 md:text-lg">
               This year I was privileged to mentor Na during the Grace Hopper
@@ -542,7 +631,7 @@
 
     <!-- Contact section -->
     <!-- Contact heading -->
-    <section id="contact" class="py-10">
+    <section id="contact" class="py-10 lg:mx-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col items-center md:items-start">
           <div>
@@ -551,28 +640,36 @@
               class="mx-auto md:w-2/3 md:mx-0 border-b border-gray-400 my-3"
             ></div>
           </div>
-          <p class="text-gray-400 text-lg uppercase">Let's chat</p>
+          <p class="text-gray-400 dark:text-gray-100 text-lg uppercase">
+            Let's chat
+          </p>
         </div>
       </div>
     </section>
     <!-- Contact content -->
-    <section id="contact--content" class="mb-32">
+    <section id="contact--content" class="mb-32 lg:mx-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col items-center">
           <div class="flex items-start space-x-3">
             <h2 class="text-3xl font-sans font-semibold mb-10">Hi there!</h2>
-            <i class="fa-regular fa-handshake ml-1 text-4xl text-softBlue"></i>
+            <i
+              class="fa-regular fa-handshake ml-1 text-4xl text-softBlue dark:text-white"
+            ></i>
           </div>
 
-          <p class="max-w-2xl text-gray-400 text-xl text-center mb-3">
+          <p
+            class="max-w-2xl text-gray-400 dark:text-gray-100 text-xl text-center mb-3"
+          >
             I always think the best way to get to know each other is
             <span
-              class="font-bold underline text-veryDarkBlue text-lg decoration-4 underline-offset-4 decoration-softRed"
+              class="font-bold underline text-veryDarkBlue dark:text-softRed text-lg decoration-4 underline-offset-4 decoration-softRed"
               >Talk</span
             >
             .
           </p>
-          <p class="max-w-2xl text-gray-400 text-xl text-center mb-3">
+          <p
+            class="max-w-2xl text-gray-400 dark:text-gray-100 text-xl text-center mb-3"
+          >
             Please feel free to reach out with me on Linkedin!
           </p>
           <div
@@ -591,7 +688,7 @@
     </section>
 
     <!-- Footer section  -->
-    <footer class="py-16 bg-veryDarkBlue">
+    <footer class="py-16 lg:px-10 bg-veryDarkBlue">
       <!-- Footer flex container -->
       <div
         class="container mx-auto px-6 flex flex-col space-y-10 md:flex-row md:space-y-0 md:justify-between"
@@ -603,14 +700,25 @@
           <div class="font-league text-3xl font-bold text-white">
             Na Lin<span class="text-softRed text-4xl ml-0.5">.</span>
           </div>
-          <a href="#projects" class="text-gray-400 hover:text-softRed"
+
+          <a
+            href="#about"
+            class="text-gray-400 dark:text-gray-100 hover:text-softRed dark:hover:text-softRed"
+            >About me</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-400 dark:text-gray-100 hover:text-softRed dark:hover:text-softRed"
             >Projects</a
           >
-          <a href="#about" class="text-gray-400 hover:text-softRed">About me</a>
-          <a href="#testimonial" class="text-gray-400 hover:text-softRed"
+          <a
+            href="#testimonial"
+            class="text-gray-400 dark:text-gray-100 hover:text-softRed dark:hover:text-softRed"
             >Testimonial</a
           >
-          <a href="#contact" class="text-gray-400 hover:text-softRed"
+          <a
+            href="#contact"
+            class="text-gray-400 dark:text-gray-100 hover:text-softRed dark:hover:text-softRed"
             >Contact Me</a
           >
         </div>
