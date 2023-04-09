@@ -11,13 +11,14 @@ function navToggle() {
 }
 
 // Dark/Light Mode
-const themeToggleBtn = document.getElementById(
-  "theme-toggle"
-) as HTMLButtonElement;
-const themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon")!;
-const themeToggleLightIcon = document.getElementById(
-  "theme-toggle-light-icon"
-)!;
+const themeToggleBtn =
+  document.querySelectorAll<HTMLButtonElement>(".theme-toggle");
+const themeToggleDarkIcon = document.querySelectorAll<SVGElement>(
+  ".theme-toggle-dark-icon"
+);
+const themeToggleLightIcon = document.querySelectorAll<SVGElement>(
+  ".theme-toggle-light-icon"
+);
 
 // show dark/light icon based on setting
 if (
@@ -25,16 +26,22 @@ if (
   (!localStorage.getItem("color-theme") &&
     window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
-  themeToggleLightIcon.classList.remove("hidden");
+  themeToggleLightIcon.forEach((icon) => {
+    icon.classList.remove("hidden");
+  });
 } else {
-  themeToggleDarkIcon.classList.remove("hidden");
+  themeToggleDarkIcon.forEach((icon) => {
+    icon.classList.remove("hidden");
+  });
 }
 
-themeToggleBtn.addEventListener("click", toggleMode);
+themeToggleBtn.forEach((btn) => {
+  btn.addEventListener("click", toggleMode);
+});
 
 function toggleMode() {
-  themeToggleDarkIcon.classList.toggle("hidden");
-  themeToggleLightIcon.classList.toggle("hidden");
+  themeToggleDarkIcon.forEach((icon) => icon.classList.toggle("hidden"));
+  themeToggleLightIcon.forEach((icon) => icon.classList.toggle("hidden"));
 
   if (localStorage.getItem("color-theme")) {
     if (localStorage.getItem("color-theme") === "light") {
