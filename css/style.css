@@ -1496,9 +1496,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:hover\:text-3xl:hover {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .dark .dark\:hover\:text-veryDarkBlue:hover {
   --tw-text-opacity: 1;
   color: hsl(229 31% 21% / var(--tw-text-opacity));
+}
+
+.dark .dark\:hover\:text-softRed:hover {
+  --tw-text-opacity: 1;
+  color: hsl(0 94% 66% / var(--tw-text-opacity));
 }
 
 .dark .dark\:focus\:ring-gray-700:focus {
