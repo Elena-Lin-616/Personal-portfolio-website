@@ -734,6 +734,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1445,6 +1449,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:text-veryDarkBlue {
   --tw-text-opacity: 1;
   color: hsl(229 31% 21% / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.dark .dark\:opacity-20 {
+  opacity: 0.2;
+}
+
+.dark .dark\:outline-dotted {
+  outline-style: dotted;
 }
 
 .dark .dark\:hover\:bg-gray-700:hover {
