@@ -1384,6 +1384,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 1px;
 }
 
+.group:hover .group-hover\:border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .group:hover .group-hover\:border-softBlue {
   --tw-border-opacity: 1;
   border-color: hsl(231 69% 60% / var(--tw-border-opacity));
@@ -1408,6 +1412,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1423,6 +1432,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
+.dark .dark\:text-veryDarkBlue {
+  --tw-text-opacity: 1;
+  color: hsl(229 31% 21% / var(--tw-text-opacity));
+}
+
 .dark .dark\:hover\:bg-gray-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -1436,6 +1450,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .group:hover .dark\:group-hover\:border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.dark .group:hover .dark\:group-hover\:border-veryDarkBlue {
+  --tw-border-opacity: 1;
+  border-color: hsl(229 31% 21% / var(--tw-border-opacity));
 }
 
 @media (min-width: 768px) {
