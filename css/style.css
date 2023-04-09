@@ -1473,6 +1473,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
+.dark .dark\:text-softRed {
+  --tw-text-opacity: 1;
+  color: hsl(0 94% 66% / var(--tw-text-opacity));
+}
+
 .dark .dark\:opacity-20 {
   opacity: 0.2;
 }
